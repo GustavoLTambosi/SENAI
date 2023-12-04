@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}Desenvolvedores Senai{% endblock %}</title>
+    <style>
+        p{
+            text-align: justify;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'app_aula/header.html' %}
+
+    {% block content %}
+        <h2>Bem-vindo ao Perfis de Desenvolvedores Senai!</h2>
+            <ul>
+                <p>O site desenvolvido pelos talentosos profissionais do Senai oferece uma experiência informativa e envolvente,
+                    destacando as habilidades e características distintivas desses desenvolvedores. As páginas cuidadosamente
+                    elaboradas proporcionam uma visão abrangente das competências individuais, permitindo aos visitantes
+                    conhecerem de perto o expertise técnico e criativo de cada membro da equipe.</p>
+            
+                <p>Além disso, o site destaca projetos recentes, oferecendo uma vitrine digital dos trabalhos mais inovadores e
+                    bem-sucedidos desenvolvidos pelos profissionais do Senai. Os visitantes têm a oportunidade de explorar os
+                    detalhes desses projetos, compreendendo a abordagem única e as soluções inovadoras aplicadas.</p>
+            
+                <p>Com um design intuitivo e amigável, o site proporciona uma experiência de navegação fluida, permitindo que os
+                    usuários descubram facilmente mais sobre os desenvolvedores, suas habilidades e os projetos que estão moldando
+                    o cenário tecnológico atual. É uma plataforma que reflete a excelência e o profissionalismo dos talentosos
+                    desenvolvedores do Senai, promovendo uma visão transparente e inspiradora de suas capacidades e conquistas
+                    recentes.
+                </p>
+            </ul>
+    {% endblock %}
+
+    {% include 'app_aula/footer.html' %}
+    </body>
+</html>

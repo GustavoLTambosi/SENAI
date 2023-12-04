@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Desenvolvedor 2 - Giordan Ebertz{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h3 {
+            color: #4d4141;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            line-height: 0.5;
+            padding-bottom: 15px;
+        }
+
+        img {
+            border-radius: 50%; /* Torna a imagem completamente redonda */
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    {% include 'app_aula/header.html' %}
+    {% block content %}
+
+    <section>
+        <img src="https://scontent.ffln1-1.fna.fbcdn.net/v/t39.30808-6/321465856_697935801856607_4088999206521057221_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeGes4qXvapeHbNKkAqWvJaAMaMrJjtedzIxoysmO153MpNAUBPBLbeuQDsaLkVIIutNKHI6pK4x5VuSN_uKgqrh&_nc_ohc=eHPbcDdE9XUAX8jBS9w&_nc_ht=scontent.ffln1-1.fna&oh=00_AfCiEDfZT6-FH3OBW7k_86o7ik2RmMJCTzXZjVeEw0AB1A&oe=657225AB" alt="Usuario" width="220" height="220">
+           <h1>Dev Giordan Ebertz</h1>
+        <h3>Sou um estudante de programação apaixonado por criar soluções inovadoras.</h3>
+    </section>
+
+    <section>
+        <h2>Sobre Mim</h2>
+        <ul>
+            <p>Olá, me chamo Giordan Ebertz, tenho 17 anos. Sou natural de Lages, SC.</p>
+            <p>Desde pequeno sempre almejei entrar na área de TI. </p>
+            <p>Sou fascinado em como funciona redes lógicas. </p>
+            <p>Estou fazendo um curso na área de desenvolvimento de sistemas no Senai.</p> 
+            <p>Um dia quero ser um programador Sênior, é um longo caminho, mas é meu objetivo.😁 </p>
+        </ul>
+    </section> 
+    <section>
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Python</li>
+            <li>MySQL</li>
+            <li>Portugol</li>
+            <li>C#</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projetos Recentes</h2>
+        <ul>
+            <p>Recentemente participei de uma amostra do conhecimento do Colégio Policial Militar, onde estudo.</p>
+            <p>Criei um projeto utilizando arduíno que automatizava a iluminação dos faróis de uma viatura da polícia.</p>
+            <p>E como o tema era sustentabilidade, fiz o circuito com energia solar, que estava atrás da miniatura.</p>
+            <img src="https://scontent.ffln1-1.fna.fbcdn.net/v/t39.30808-6/407177842_1999279330458517_6326503672443766415_n.jpg?stp=dst-jpg_p843x403&_nc_cat=105&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeFJ6o4m--Mb-tJ0FBtyIedev2MrqpsZkQ-_YyuqmxmRD0zQzthvKyo1qIpZqBrIWx0Mj7LX1l_Vyh_PmldjpR21&_nc_ohc=b22IJYD15msAX-eCUPS&_nc_ht=scontent.ffln1-1.fna&oh=00_AfB7nFvGgf-18gfMgezHnSr6WEGKZQCNRvM0VX7PsYt4pg&oe=6570BC38" alt="Projeto" width="220" height="220" border-radius: 10px>
+        </ul>
+    </section>
+{% endblock %}
+{% include 'app_aula/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Desenvolvedor 2 - Samuel dos Santos{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h3 {
+            color: #4d4141;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            line-height: 0.5;
+            padding-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        img {
+            border-radius: 50%; /* Torna a imagem completamente redonda */
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    {% include 'app_aula/header.html' %}
+    {% block content %}
+
+    <section>
+        <img src="{% static 'img/usuario.jpg' %}" alt="Usuario" width="300" height="300" style="margin: auto; display: block;">
+           <h1>Dev Samuel dos Santos</h1>
+        <h3 style="text-align: center;">Estudante de Desenvolvimento de Sitemas no Senai.</h3>
+    </section>
+
+    <section>
+        <h2>Sobre Mim</h2>
+        <ul>
+            <p>Em uma trajetória repleta de conquistas e dedicação, destaco-me como um profissional multifacetado no campo da Tecnologia da Informação (TI). 
+                Com uma extensa lista de realizações acadêmicas, cursei inúmeros programas de graduação em renomadas instituições do Brasil e do exterior, 
+                elevando meu conhecimento a patamares internacionais.</p>
+            <p>Ao longo de minha carreira, contribuí para o avanço tecnológico em empresas líderes globais, como Google e Apple, onde desempenhei papéis cruciais em 
+                projetos inovadores que moldaram o cenário digital. Minha expertise abrange desde desenvolvimento de software até gestão de projetos complexos, 
+                consolidando-me como um profissional versátil e capacitado.</p>
+            <p>Além disso, conquistei diversas certificações e pós-graduações, solidificando meu domínio nas mais recentes tendências tecnológicas. 
+                Minha habilidade em integrar conhecimentos adquiridos em diferentes culturas acadêmicas e profissionais é um diferencial que impulsiona minha contribuição 
+                para a evolução contínua do setor de TI.</p>
+            <p>Essa jornada marcada por realizações reflete meu compromisso constante com a excelência, impulsionando-me a buscar continuamente desafios que ampliem meu impacto no universo tecnológico.</p> 
+        </ul>
+    </section> 
+    <section>
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projetos Recentes</h2>
+        <ul>
+            <p>Ajudou na elaboração do site Desenvolvedores Senai.</p>
+        </ul>
+    </section>
+{% endblock %}
+{% include 'app_aula/footer.html' %}
+</body>
+</html>

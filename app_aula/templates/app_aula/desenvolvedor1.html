@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Desenvolvedor 1 - Gustavo Luan Tambosi{% endblock %}</title>
+    <style>
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #555;
+            line-height: 0.5;
+            padding-bottom: 15px;
+        }
+        h3 {
+            color: #4d4141;
+        }
+    </style>
+</head>
+<body>
+    {% include 'app_aula/header.html' %}
+    {% block content %}
+        <section>
+            <img src="{% static 'img/usuario.jpg' %}" alt="Usuario" width="300" height="300" style="margin: auto; display: block;">
+                <h1>Dev Gustavo Luan Tambosi</h1>
+            <h3 style="text-align: center;">Estudante de Desenvolvimento de Sitemas no Senai.</h3>
+        </section>
+
+        <section>
+            <h2>Sobre Mim</h2>
+            <ul>
+                <p>Me chamo Gustavo Luan Tambosi, tenho 17 anos. Sou natural de Rio do Sul, SC.</p>
+                <p>Acabei de me formar no Ensino Médio.</p>
+                <p>Estou fazendo um curso na área de desenvolvimento de sistemas no Senai.</p> 
+                <p>Meu objetivo é se tornar programandor sênior.</p>
+            </ul>
+        </section> 
+
+        <section>
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Python</li>
+                <li>Firebird</li>
+                <li>Delphi</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projetos Recentes</h2>
+            <ul>
+                <p>Ajudei na atualização de um sistema para emissão de nota fiscal na empresa em que trabalhei.</p>
+                <p>Criei um sistema para calcular a média geral dos alunos da minha escola.</p>
+                <p>Desenvolvedor do site Desenvolvedores Senai.</p>
+                <img src="{% static 'img/senai.png' %}" alt="Senai" width="135" height="135" style="border-radius: 50%; display: block; margin: auto;">
+            </ul>
+        </section>
+    {% endblock %}
+
+    {% include 'app_aula/footer.html' %}
+</body>
+</html>
